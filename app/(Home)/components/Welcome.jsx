@@ -1,30 +1,54 @@
-import { Button } from "@/components/ui/button";
+"use client";
 import React from "react";
 import SigninButton from "./SigninButton";
-import SplitTextAnimation from "@/components/animation/SplitTextAnimation";
+import { motion } from "framer-motion";
+import { ShowAnimation } from "@/utils/animation";
+
 
 export default function Welcome() {
   return (
-    <div className="flex flex-col gap-4 items-center justify-center w-full p-5 min-h-screen drop-shadow-lg">
-      <div className="flex flex-col sm:items-start items-center sm:justify-start justify-center sm:text-left text-center gap-3">
-        <p className="sm:text-6xl text-5xl font-semibold">
+    <motion.div
+      variants={ShowAnimation}
+      initial="hidden"
+      animate="visible"
+      className="flex flex-col gap-4 items-center justify-center w-full p-5 min-h-screen drop-shadow-lg"
+    >
+      <motion.div
+        variants={ShowAnimation}
+        className="flex flex-col lg:items-start items-center lg:justify-start justify-center lg:text-left text-center gap-3"
+      >
+        <motion.p
+          variants={ShowAnimation}
+          className="sm:text-6xl text-5xl font-semibold"
+        >
           <span className="text-blue-400">Fsegt</span>
           <span className="text-white">Classroom</span>
-        </p>
-
-        <SplitTextAnimation
-          className="text-sm sm:w-[900px] w-fit text-gray-500"
-          text="Welcome to Fsegt-classroom
-
-Were excited to offer you an innovative online learning environment designed to enhance collaboration and streamline your educational experience. With our user-friendly interface, you can effortlessly create, manage, and participate in virtual classrooms, making learning more engaging and accessible.
-
-Whether you're an educator aiming to inspire or a student eager to explore, Fsegt-classroom provides the tools you need to succeed. Join us today and transform the way you teach and learn.
-
-Experience the future of education with Fsegt-classroom—where knowledge meets innovation"
-        />
-      </div>
+        </motion.p>
+        <motion.p
+          variants={ShowAnimation}
+          className="text-gray-600 text-sm lg:w-[900px] w-auto"
+        >
+          Welcome to{" "}
+          <span>
+            <span className=" font-extrabold underline">Fsegt-classroom </span>
+          </span>
+          ! We're excited to offer you an innovative online learning environment
+          designed to enhance collaboration and streamline your educational
+          experience. With our user-friendly interface, you can effortlessly
+          create, manage, and participate in virtual classrooms, making learning
+          more engaging and accessible. Whether you're an educator aiming to
+          inspire or a student eager to explore,{" "}
+          <span className=" font-extrabold underline">Fsegt-classroom </span>{" "}
+          provides the tools you need to succeed. Join us today and transform
+          the way you teach and learn. Experience the future of education with{" "}
+          <span className=" font-extrabold underline">Fsegt-classroom </span>
+          where knowledge meets innovation.
+        </motion.p>{" "}
+        <motion.div variants={ShowAnimation}>
+          <SigninButton />
+        </motion.div>
+      </motion.div>
       {/* Sigin in With Google*/}
-      <SigninButton />
-    </div>
+    </motion.div>
   );
 }
