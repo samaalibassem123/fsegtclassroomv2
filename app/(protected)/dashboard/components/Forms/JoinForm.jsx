@@ -7,7 +7,7 @@ export default function JoinForm() {
   return (
     <form action="" className="flex flex-col gap-4">
       <Label>Classroom Code:</Label>
-      <Input placeholder="Enter the classroom code" />
+      <Input placeholder="Enter the classroom code" name="ccode" />
       <Button>Join</Button>
     </form>
   );
