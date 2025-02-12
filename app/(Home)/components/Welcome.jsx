@@ -4,14 +4,13 @@ import SigninButton from "./SigninButton";
 import { motion } from "framer-motion";
 import { ShowAnimation } from "@/utils/animation";
 
-
 export default function Welcome() {
   return (
     <motion.div
       variants={ShowAnimation}
       initial="hidden"
       animate="visible"
-      className="flex flex-col gap-4 items-center justify-center w-full p-5 min-h-screen drop-shadow-lg"
+      className="flex flex-col gap-4 items-center justify-center min-h-svh w-full px-5  drop-shadow-lg"
     >
       <motion.div
         variants={ShowAnimation}
@@ -26,7 +25,7 @@ export default function Welcome() {
         </motion.p>
         <motion.p
           variants={ShowAnimation}
-          className="text-gray-600 text-sm lg:w-[900px] w-auto"
+          className="text-gray-600 lg:text-sm text-[12px] p-1 lg:w-[900px] w-auto"
         >
           Welcome to{" "}
           <span>
@@ -45,10 +44,10 @@ export default function Welcome() {
           where knowledge meets innovation.
         </motion.p>{" "}
         <motion.div variants={ShowAnimation}>
+          {/* Sigin in With Google*/}
           <SigninButton />
         </motion.div>
       </motion.div>
-      {/* Sigin in With Google*/}
     </motion.div>
   );
 }

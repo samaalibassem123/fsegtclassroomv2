@@ -3,9 +3,9 @@ import { FcGoogle } from "react-icons/fc";
 import { FaGoogle } from "react-icons/fa";
 export default function SigninButton() {
   return (
-    <button className="bg-white p-3  rounded-lg font-normal flex items-start justify-between gap-3 border hover:opacity-65 transition-all">
+    <button className="bg-white p-3  rounded-lg font-normal flex items-start justify-between gap-3 border hover:opacity-65 transition-all dark:bg-blue-500 ring-1 dark:ring-blue-400 dark:border-none">
       <span>Sign-in with Google</span>
-      <FaGoogle className=" size-5" />  
+      <FaGoogle className=" size-5" />
     </button>
   );
 }

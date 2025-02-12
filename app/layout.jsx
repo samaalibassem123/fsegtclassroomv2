@@ -10,10 +10,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
-        <ThemeProvider enableSystem disableTransitionOnChange>
-          {" "}
-          <ModeToggle />
+      <body className="min-h-screen w-full ">
+        <ThemeProvider attribute="class" enableSystem disableTransitionOnChange>
           {children}
         </ThemeProvider>
       </body>
