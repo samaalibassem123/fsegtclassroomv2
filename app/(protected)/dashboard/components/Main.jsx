@@ -1,7 +1,7 @@
 import React from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import CreatedContainer from "./CreatedContainer";
-import JoinedContainer from "./JoinedContainer";
+import CreatedContainer from "./containers/CreatedContainer";
+import JoinedContainer from "./containers/JoinedContainer";
 
 export default function Main() {
   return (
