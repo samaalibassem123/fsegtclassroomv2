@@ -6,7 +6,7 @@ import DMenu from "./Menu";
 
 export default function Header() {
   return (
-    <header className="p-4 sticky top-0 flex items-center justify-between drop-shadow-xl shadow-lg backdrop-blur-sm dark:bg-black/50">
+    <header className=" z-40 p-4 sticky top-0 flex items-center justify-between drop-shadow-xl shadow-lg backdrop-blur-sm dark:bg-black/50">
       <h1 className="sm:text-2xl text-xl font-semibold">
         <span className="text-blue-500">Fsegt</span>
         <span className="text-black/70 dark:text-white">Classroom</span>

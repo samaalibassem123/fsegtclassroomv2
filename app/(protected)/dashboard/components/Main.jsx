@@ -1,18 +1,35 @@
 import React from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import CreatedContainer from "./CreatedContainer";
+import JoinedContainer from "./JoinedContainer";
 
 export default function Main() {
   return (
     <main className="flex  w-full justify-center p-5 min-h-svh drop-shadow-lg">
-      <Tabs defaultValue="account" className=" w-full flex flex-col items-center">
+      <Tabs
+        defaultValue="created"
+        className=" w-full flex flex-col items-center"
+      >
         <TabsList className="w-full transition-all">
-          <TabsTrigger value="account" className="w-[50%] text-md ">Created</TabsTrigger>
-          <TabsTrigger value="password" className="w-[50%] text-md ">Joined</TabsTrigger>
+          <TabsTrigger value="created" className="w-[50%] text-md text-black">
+            Created
+          </TabsTrigger>
+          <TabsTrigger value="joined" className="w-[50%] text-md text-black">
+            Joined
+          </TabsTrigger>
         </TabsList>
-        <TabsContent value="account">
-          Make changes to your account here.
+        <TabsContent value="created" className="w-full min-h-svh">
+          <p className="text-sm text-gray-400 text-center my-2">
+            Classes That you created.
+          </p>
+          <CreatedContainer />
         </TabsContent>
-        <TabsContent value="password">Change your password here.</TabsContent>
+        <TabsContent value="joined" className="w-full min-h-svh">
+          <p className="text-sm text-gray-400 text-center my-2">
+            Classes That you Joined.
+          </p>
+          <JoinedContainer />
+        </TabsContent>
       </Tabs>
     </main>
   );
