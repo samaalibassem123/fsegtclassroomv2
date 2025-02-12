@@ -21,7 +21,7 @@ export default function JoinPrompt() {
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>Join a class 📚 </DialogTitle>
+          <DialogTitle>Join a class 📖 </DialogTitle>
           <DialogDescription>
             Fill the fields to create your class
           </DialogDescription>
