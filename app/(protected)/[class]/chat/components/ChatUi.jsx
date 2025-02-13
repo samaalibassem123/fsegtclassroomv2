@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/card";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { Textarea } from "@/components/ui/textarea";
 
 export default function ChatUi() {
   const [messages, setMessages] = useState([]);
@@ -40,13 +41,13 @@ export default function ChatUi() {
   };
 
   return (
-    <div className="flex sm:items-center justify-center sm:min-h-screen  bg-gray-100 ">
-      <Card className="w-full max-w-2xl">
+    <div className="flex sm:items-center justify-center min-h-screen w-full fixed bg-gray-100 ">
+      <Card className="w-full h-svh">
         <CardHeader>
           <CardTitle>Chat </CardTitle>
         </CardHeader>
         <CardContent className="sm:p-2 p-0">
-          <ScrollArea className="h-[60vh] pr-4 ">
+          <ScrollArea className="h-[75svh] pr-4 ">
             {messages.map((m) => (
               <div
                 key={m.id}
@@ -73,7 +74,7 @@ export default function ChatUi() {
           </ScrollArea>
         </CardContent>
         <CardFooter>
-          <div className="flex w-full space-x-2">
+          <div className="flex w-full space-x-2 py-3">
             <Input
               value={input}
               onChange={(e) => setInput(e.target.value)}
