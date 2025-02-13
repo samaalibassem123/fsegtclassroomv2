@@ -3,7 +3,9 @@ import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import React from "react";
 import DMenu from "./CMenu";
-import { BookText, MessageCircle, Video } from "lucide-react";
+import { BookText, MessageCircle, Users, Video } from "lucide-react";
+import Link from "next/link";
+import CMenu from "./CMenu";
 
 export default function CHeader() {
   return (
@@ -13,16 +15,28 @@ export default function CHeader() {
         <span className="text-black/70 dark:text-white">Classroom</span>
       </h1>
       <div className="sm:flex hidden gap-6">
-        <Button className="font-extrabold ">
-          Chat <MessageCircle size={32} />
-        </Button>
-        <Button className="font-extrabold ">
-          Meet
-          <Video size={32} />
-        </Button>
-        <Button className="font-extrabold ">
-          Docs <BookText size={32} />
-        </Button>
+        <Link href="test/chat">
+          <Button className="font-extrabold ">
+            Chat <MessageCircle size={32} />
+          </Button>
+        </Link>
+        <Link href="test/meet">
+          <Button className="font-extrabold ">
+            Meet
+            <Video size={32} />
+          </Button>
+        </Link>
+        <Link href="test/docs">
+          <Button className="font-extrabold ">
+            Docs <BookText size={32} />
+          </Button>
+        </Link>
+        {/*if the role is a teacher*/}
+        <Link href="test/groups">
+          <Button className="font-extrabold ">
+            Groups <Users size={32} />
+          </Button>
+        </Link>
       </div>
       <div className="flex items-center justify-center gap-3">
         <Avatar>
@@ -36,7 +50,7 @@ export default function CHeader() {
           <ModeToggle />
         </div>
         {/*MENU FOR SMALL DEVICES */}
-        <DMenu />
+        <CMenu />
       </div>
     </header>
   );

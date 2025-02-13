@@ -29,6 +29,7 @@ export default function CMenu() {
   const [chatClicked, chatIsClicked] = useState(false);
   const [GroupClicked, GroupIsClicked] = useState(false);
   const [LogoutClicked, LogoutIsClicked] = useState(false);
+
   return (
     <div className="sm:hidden flex items-center ">
       <Sheet>
@@ -55,7 +56,7 @@ export default function CMenu() {
                 />
                 🙂
               </p>
-              <Link href={"/chat"} onClick={() => chatIsClicked(true)}>
+              <Link href={"test/chat"} onClick={() => chatIsClicked(true)}>
                 <Button>
                   {chatClicked ? (
                     <ClipLoader color="#a6b9f4" loading={true} size={20} />
@@ -67,7 +68,7 @@ export default function CMenu() {
                 </Button>
               </Link>
 
-              <Link href={"meet"} onClick={() => meetIsClicked(true)}>
+              <Link href={"test/meet"} onClick={() => meetIsClicked(true)}>
                 <Button>
                   {meetClicked ? (
                     <ClipLoader color="#a6b9f4" loading={true} size={20} />
@@ -79,7 +80,7 @@ export default function CMenu() {
                 </Button>
               </Link>
 
-              <Link href={"docs"} onClick={() => docIsClicked(true)}>
+              <Link href={"test/docs"} onClick={() => docIsClicked(true)}>
                 <Button>
                   {docClicked ? (
                     <ClipLoader color="#a6b9f4" loading={true} size={20} />
@@ -92,7 +93,7 @@ export default function CMenu() {
               </Link>
 
               {/*IF THE ROLE IS A TEACHER*/}
-              <Link href={"/group"} onClick={() => GroupIsClicked(true)}>
+              <Link href={"test/group"} onClick={() => GroupIsClicked(true)}>
                 <Button>
                   {GroupClicked ? (
                     <ClipLoader color="#a6b9f4" loading={true} size={20} />
