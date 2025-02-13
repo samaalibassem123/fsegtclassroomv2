@@ -30,7 +30,7 @@ export default function Main() {
           </p>
           <JoinedContainer />
         </TabsContent>
-      </Tabs>
+      </Tabs> 
     </main>
   );
 }
