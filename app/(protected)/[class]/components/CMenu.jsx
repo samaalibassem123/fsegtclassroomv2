@@ -1,3 +1,4 @@
+"use client";
 import { ModeToggle } from "@/components/animation/ModeToggle";
 import SplitTextAnimation from "@/components/animation/SplitTextAnimation";
 import { Button } from "@/components/ui/button";
@@ -9,10 +10,25 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { BookText, LogOut, Menu, MessageCircle, Video } from "lucide-react";
-import React from "react";
+import {
+  BookText,
+  LogOut,
+  Menu,
+  MessageCircle,
+  Users,
+  Video,
+} from "lucide-react";
+import Link from "next/link";
+import React, { useState } from "react";
+import { ClipLoader } from "react-spinners";
 
 export default function CMenu() {
+  const [EnterClicked, EnterIsClicked] = useState(false);
+  const [docClicked, docIsClicked] = useState(false);
+  const [meetClicked, meetIsClicked] = useState(false);
+  const [chatClicked, chatIsClicked] = useState(false);
+  const [GroupClicked, GroupIsClicked] = useState(false);
+  const [LogoutClicked, LogoutIsClicked] = useState(false);
   return (
     <div className="sm:hidden flex items-center ">
       <Sheet>
@@ -39,18 +55,66 @@ export default function CMenu() {
                 />
                 🙂
               </p>
-              <Button className="font-extrabold ">
-                Chat <MessageCircle size={32} />
-              </Button>
-              <Button className="font-extrabold ">
-                Meet
-                <Video size={32} />
-              </Button>
-              <Button className="font-extrabold ">
-                Docs <BookText size={32} />
-              </Button>
+              <Link href={"/chat"} onClick={() => chatIsClicked(true)}>
+                <Button>
+                  {chatClicked ? (
+                    <ClipLoader color="#a6b9f4" loading={true} size={20} />
+                  ) : (
+                    <>
+                      Chat <MessageCircle size={32} />
+                    </>
+                  )}
+                </Button>
+              </Link>
 
-              <Button className="font-extrabold ">Log-out <LogOut size={32} /></Button>
+              <Link href={"meet"} onClick={() => meetIsClicked(true)}>
+                <Button>
+                  {meetClicked ? (
+                    <ClipLoader color="#a6b9f4" loading={true} size={20} />
+                  ) : (
+                    <>
+                      Meet <Video size={32} />
+                    </>
+                  )}
+                </Button>
+              </Link>
+
+              <Link href={"docs"} onClick={() => docIsClicked(true)}>
+                <Button>
+                  {docClicked ? (
+                    <ClipLoader color="#a6b9f4" loading={true} size={20} />
+                  ) : (
+                    <>
+                      Docs <BookText size={32} />
+                    </>
+                  )}
+                </Button>
+              </Link>
+
+              {/*IF THE ROLE IS A TEACHER*/}
+              <Link href={"/group"} onClick={() => GroupIsClicked(true)}>
+                <Button>
+                  {GroupClicked ? (
+                    <ClipLoader color="#a6b9f4" loading={true} size={20} />
+                  ) : (
+                    <>
+                      Groups <Users />
+                    </>
+                  )}
+                </Button>
+              </Link>
+
+              <Link href={"/"} onClick={() => LogoutIsClicked(true)}>
+                <Button className="font-extrabold ">
+                  {LogoutClicked ? (
+                    <ClipLoader color="#a6b9f4" loading={true} size={20} />
+                  ) : (
+                    <>
+                      Log-out <LogOut size={32} />
+                    </>
+                  )}
+                </Button>
+              </Link>
             </div>
             <SheetDescription>Created By Besbes</SheetDescription>
           </SheetHeader>
