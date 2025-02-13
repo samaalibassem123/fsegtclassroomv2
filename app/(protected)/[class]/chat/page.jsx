@@ -3,7 +3,7 @@ import ChatUi from "./components/ChatUi";
 
 export default function page() {
   return (
-    <div>
+    <div className=" overflow-hidden h-fit">
       <ChatUi />
     </div>
   );

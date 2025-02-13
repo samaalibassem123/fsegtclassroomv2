@@ -40,13 +40,13 @@ export default function ChatUi() {
   };
 
   return (
-    <div className="flex sm:items-center justify-center min-h-screen bg-gray-100 ">
+    <div className="flex sm:items-center justify-center sm:min-h-screen  bg-gray-100 ">
       <Card className="w-full max-w-2xl">
         <CardHeader>
           <CardTitle>Chat </CardTitle>
         </CardHeader>
-        <CardContent>
-          <ScrollArea className="h-[60vh] pr-4">
+        <CardContent className="sm:p-2 p-0">
+          <ScrollArea className="h-[60vh] pr-4 ">
             {messages.map((m) => (
               <div
                 key={m.id}
@@ -68,11 +68,6 @@ export default function ChatUi() {
                 >
                   {m.content}
                 </div>
-                {m.sender === "user" && (
-                  <Avatar className="ml-2">
-                    <AvatarFallback>U</AvatarFallback>
-                  </Avatar>
-                )}
               </div>
             ))}
           </ScrollArea>
