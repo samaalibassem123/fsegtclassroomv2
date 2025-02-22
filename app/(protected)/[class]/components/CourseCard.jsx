@@ -31,14 +31,12 @@ export default function CourseCard({ courseName, Description, Notes, Docs }) {
           <div className="flex flex-wrap gap-2">
             {Docs.map((doc, index) => (
               <div
-                className="border rounded-lg border-red-400 p-2 cursor-pointer hover:shadow-lg"
+                className="border rounded-lg flex items-end gap-1 border-red-400 p-2 cursor-pointer hover:shadow-lg"
                 key={index}
               >
-                <div className="flex items-end">
-                  <FileText />
-                  <span>{doc.name}</span>
-                </div>
-                <span className="text-sm text-gray-600">{doc.type}</span>
+                <FileText />
+                <span>{doc.name}</span>
+                <span className="text-sm text-gray-600">({doc.type})</span>
               </div>
             ))}
           </div>
