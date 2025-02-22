@@ -14,7 +14,7 @@ export default function CHeader() {
         <span className="text-blue-500">Fsegt</span>
         <span className="text-black/70 dark:text-white">Classroom</span>
       </h1>
-      <div className="sm:flex hidden gap-6">
+      <div className="lg:flex hidden gap-6">
         <Link href="/test">
           <Button className="font-extrabold ">Dashboard</Button>
         </Link>
@@ -48,8 +48,8 @@ export default function CHeader() {
         </Avatar>
 
         {/*THE LOGOUT BUTTON */}
-        <Button className="sm:inline-block hidden font-semibold">Logout</Button>
-        <div className=" sm:inline-block hidden">
+        <Button className="lg:inline-block hidden font-semibold">Logout</Button>
+        <div className=" lg:inline-block hidden">
           <ModeToggle />
         </div>
         {/*MENU FOR SMALL DEVICES */}

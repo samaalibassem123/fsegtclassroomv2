@@ -14,6 +14,14 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Textarea } from "@/components/ui/textarea";
 
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+
 export default function ChatUi() {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
@@ -44,7 +52,18 @@ export default function ChatUi() {
     <div className="flex sm:items-center justify-center min-h-screen w-full fixed bg-gray-100 ">
       <Card className="w-full h-svh">
         <CardHeader>
-          <CardTitle>Chat </CardTitle>
+          <CardTitle>
+            <Select>
+              <SelectTrigger className="w-[180px]">
+                <SelectValue placeholder="General" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="general">General</SelectItem>
+                <SelectItem value="a01">Group A01</SelectItem>
+                <SelectItem value="a02">Group A02</SelectItem>
+              </SelectContent>
+            </Select>
+          </CardTitle>
         </CardHeader>
         <CardContent className="sm:p-2 p-0">
           <ScrollArea className="h-[75svh] pr-4 ">

@@ -33,7 +33,7 @@ export default function CMenu() {
   const [LogoutClicked, LogoutIsClicked] = useState(false);
 
   return (
-    <div className="sm:hidden flex items-center ">
+    <div className="lg:hidden flex items-center ">
       <Sheet>
         <SheetTrigger>
           <Menu size={30} strokeWidth={2} />

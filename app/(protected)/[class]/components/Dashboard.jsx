@@ -33,7 +33,7 @@ export default function Dashboard() {
       <p className="text-gray-600 text-center text-xl">
         Create Your First Course Using The Upper Button <br /> 🙄☝
       </p>
-      <div className=" space-y-2">
+      <div className=" space-y-3">
               <CourseCard Docs={docs} />
       <CourseCard Docs={docs} />
       <CourseCard Docs={docs} />

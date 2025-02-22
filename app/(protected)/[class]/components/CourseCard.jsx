@@ -4,6 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { Button } from "@/components/ui/button";
 
 import { FileText } from "lucide-react";
 import React from "react";
@@ -20,6 +21,7 @@ export default function CourseCard({ courseName, Description, Notes, Docs }) {
             </small>
           </div>
         </AccordionTrigger>
+
         <AccordionContent className="space-y-2">
           <span className=" underline text-lg">Notes:</span>
           <p>
@@ -41,6 +43,8 @@ export default function CourseCard({ courseName, Description, Notes, Docs }) {
             ))}
           </div>
         </AccordionContent>
+        {/*DELETE BUTTON FOR TEACHER ROLE */}
+        <Button className="mb-2 bg-red-500 hover:bg-red-500/50">Delete</Button>
       </AccordionItem>
     </Accordion>
   );
