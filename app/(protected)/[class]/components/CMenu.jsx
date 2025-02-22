@@ -4,6 +4,7 @@ import SplitTextAnimation from "@/components/animation/SplitTextAnimation";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
+  SheetClose,
   SheetContent,
   SheetDescription,
   SheetHeader,
@@ -24,6 +25,7 @@ import { ClipLoader } from "react-spinners";
 
 export default function CMenu() {
   const [EnterClicked, EnterIsClicked] = useState(false);
+  const [Dashboard, DashboardIsClicked] = useState(false);
   const [docClicked, docIsClicked] = useState(false);
   const [meetClicked, meetIsClicked] = useState(false);
   const [chatClicked, chatIsClicked] = useState(false);
@@ -56,6 +58,17 @@ export default function CMenu() {
                 />
                 🙂
               </p>
+
+              <Link href={"/test"} onClick={() => DashboardIsClicked(true)}>
+                <Button>
+                  {Dashboard ? (
+                    <ClipLoader color="#a6b9f4" loading={true} size={20} />
+                  ) : (
+                    <>Dashboard</>
+                  )}
+                </Button>
+              </Link>
+
               <Link href={"/test/chat"} onClick={() => chatIsClicked(true)}>
                 <Button>
                   {chatClicked ? (

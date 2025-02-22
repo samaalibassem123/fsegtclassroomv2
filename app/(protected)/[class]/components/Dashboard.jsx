@@ -4,12 +4,13 @@ import AddCourse from "./AddCourse";
 export default function Dashboard() {
   return (
     <div className="w-full min-h-svh p-2 ">
-      {/*if the role is a teacher */}
+      {/*ROLE == TEACHER */}
       <AddCourse />
-      {/*get the courses*/}
+      {/*GET COURSES*/}
       <p className="text-gray-600 text-center text-xl">
         Create Your First Course Using The Upper Button <br /> 🙄☝
       </p>
+      {}
     </div>
   );
 }
