@@ -15,6 +15,9 @@ export default function CHeader() {
         <span className="text-black/70 dark:text-white">Classroom</span>
       </h1>
       <div className="sm:flex hidden gap-6">
+        <Link href="/test">
+          <Button className="font-extrabold ">Dashboard</Button>
+        </Link>
         <Link href="test/chat">
           <Button className="font-extrabold ">
             Chat <MessageCircle size={32} />
