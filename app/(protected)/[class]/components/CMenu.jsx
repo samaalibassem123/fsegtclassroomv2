@@ -58,7 +58,6 @@ export default function CMenu() {
                 />
                 🙂
               </p>
-
               <Link href={"/test"} onClick={() => DashboardIsClicked(true)}>
                 <Button>
                   {Dashboard ? (
@@ -68,7 +67,6 @@ export default function CMenu() {
                   )}
                 </Button>
               </Link>
-
               <Link href={"/test/chat"} onClick={() => chatIsClicked(true)}>
                 <Button>
                   {chatClicked ? (
@@ -80,7 +78,6 @@ export default function CMenu() {
                   )}
                 </Button>
               </Link>
-
               <Link href={"/test/meet"} onClick={() => meetIsClicked(true)}>
                 <Button>
                   {meetClicked ? (
@@ -92,7 +89,6 @@ export default function CMenu() {
                   )}
                 </Button>
               </Link>
-
               <Link href={"/test/docs"} onClick={() => docIsClicked(true)}>
                 <Button>
                   {docClicked ? (
@@ -104,7 +100,6 @@ export default function CMenu() {
                   )}
                 </Button>
               </Link>
-
               {/*IF THE ROLE IS A TEACHER*/}
               <Link href={"/test/groups"} onClick={() => GroupIsClicked(true)}>
                 <Button>
@@ -116,8 +111,12 @@ export default function CMenu() {
                     </>
                   )}
                 </Button>
+              </Link>{" "}
+              <Link href="/dashboard">
+                <Button className="font-extrabold bg-white text-black hover:bg-white/40 ">
+                  Go Back to Your Classes <LogOut />
+                </Button>
               </Link>
-
               <Link href={"/"} onClick={() => LogoutIsClicked(true)}>
                 <Button className="font-extrabold ">
                   {LogoutClicked ? (
