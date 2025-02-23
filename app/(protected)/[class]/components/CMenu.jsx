@@ -106,7 +106,7 @@ export default function CMenu() {
               </Link>
 
               {/*IF THE ROLE IS A TEACHER*/}
-              <Link href={"/test/group"} onClick={() => GroupIsClicked(true)}>
+              <Link href={"/test/groups"} onClick={() => GroupIsClicked(true)}>
                 <Button>
                   {GroupClicked ? (
                     <ClipLoader color="#a6b9f4" loading={true} size={20} />

@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import React from "react";
 import DMenu from "./CMenu";
-import { BookText, MessageCircle, Users, Video } from "lucide-react";
+import { BookText, LogOut, MessageCircle, Users, Video } from "lucide-react";
 import Link from "next/link";
 import CMenu from "./CMenu";
 
@@ -38,6 +38,11 @@ export default function CHeader() {
         <Link href="/test/groups">
           <Button className="font-extrabold ">
             Groups <Users size={32} />
+          </Button>
+        </Link>
+        <Link href="/dashboard">
+          <Button className="font-extrabold bg-white text-black hover:bg-white/40 ">
+            Go Back to Your Classes <LogOut />
           </Button>
         </Link>
       </div>
