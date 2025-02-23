@@ -20,11 +20,14 @@ import { Textarea } from "@/components/ui/textarea";
 export default function AddCourse() {
   return (
     <Drawer>
-      <DrawerTrigger className="flex w-full items-center justify-center py-5">
-        <Button className=" bg-gray-900 hover:bg-black/70 dark:bg-white dark:hover:bg-white/50">
-          Add a course <Plus />
-        </Button>
-      </DrawerTrigger>
+      <div className="flex items-center justify-center py-5 w-full">
+        <DrawerTrigger>
+          <Button className=" bg-gray-900 hover:bg-black/70 dark:bg-white dark:hover:bg-white/50">
+            Add a course <Plus />
+          </Button>
+        </DrawerTrigger>
+      </div>
+
       <DrawerContent>
         <DrawerHeader>
           <DrawerTitle>Are you Ready to Build your New Course 😀?</DrawerTitle>
