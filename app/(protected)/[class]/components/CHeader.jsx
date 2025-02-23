@@ -18,24 +18,24 @@ export default function CHeader() {
         <Link href="/test">
           <Button className="font-extrabold ">Dashboard</Button>
         </Link>
-        <Link href="test/chat">
+        <Link href="/test/chat">
           <Button className="font-extrabold ">
             Chat <MessageCircle size={32} />
           </Button>
         </Link>
-        <Link href="test/meet">
+        <Link href="/test/meet">
           <Button className="font-extrabold ">
             Meet
             <Video size={32} />
           </Button>
         </Link>
-        <Link href="test/docs">
+        <Link href="/test/docs">
           <Button className="font-extrabold ">
             Docs <BookText size={32} />
           </Button>
         </Link>
         {/*if the role is a teacher*/}
-        <Link href="test/groups">
+        <Link href="/test/groups">
           <Button className="font-extrabold ">
             Groups <Users size={32} />
           </Button>
