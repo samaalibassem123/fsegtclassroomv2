@@ -20,17 +20,28 @@ import {
   Video,
 } from "lucide-react";
 import Link from "next/link";
-import React, { useState } from "react";
+import { usePathname } from "next/navigation";
+import React, { useEffect, useState } from "react";
 import { ClipLoader } from "react-spinners";
-
+import * as SheetPrimitive from "@radix-ui/react-dialog";
 export default function CMenu() {
-  const [EnterClicked, EnterIsClicked] = useState(false);
+  const pathname = usePathname();
+
   const [Dashboard, DashboardIsClicked] = useState(false);
   const [docClicked, docIsClicked] = useState(false);
   const [meetClicked, meetIsClicked] = useState(false);
   const [chatClicked, chatIsClicked] = useState(false);
   const [GroupClicked, GroupIsClicked] = useState(false);
   const [LogoutClicked, LogoutIsClicked] = useState(false);
+
+  useEffect(() => {
+    DashboardIsClicked(false);
+    docIsClicked(false);
+    meetIsClicked(false);
+    chatIsClicked(false);
+    GroupIsClicked(false);
+    LogoutIsClicked(false);
+  }, [pathname]);
 
   return (
     <div className="lg:hidden flex items-center ">

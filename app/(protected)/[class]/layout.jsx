@@ -1,4 +1,4 @@
- import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeProvider } from "@/components/theme-provider";
 import CHeader from "./components/CHeader";
 
 export const metadata = {
@@ -8,13 +8,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className="min-h-screen w-full ">
-        <ThemeProvider attribute="class" enableSystem disableTransitionOnChange>
-          <CHeader/>
-          {children}
-        </ThemeProvider>
-      </body>
-    </html>
+    <main className="min-h-screen w-full ">
+      <CHeader />
+      {children}
+    </main>
   );
 }

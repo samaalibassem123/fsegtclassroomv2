@@ -66,7 +66,7 @@ export default function ChatUi() {
           </CardTitle>
         </CardHeader>
         <CardContent className="sm:p-2 p-0">
-          <ScrollArea className="h-[75svh] pr-4 ">
+          <ScrollArea className="h-[72svh] pr-4 ">
             {messages.map((m) => (
               <div
                 key={m.id}
