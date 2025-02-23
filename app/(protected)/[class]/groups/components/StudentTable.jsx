@@ -9,6 +9,8 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
 
 export default function StudentTable() {
   const students = [
@@ -50,7 +52,11 @@ export default function StudentTable() {
     },
   ];
   return (
-    <div>
+    <div className="p-2">
+      <div className="flex items-center gap-1">
+        <Input placeholder="Search by Student Name 🎯" />
+        <Button>Search</Button>
+      </div>
       <Table>
         <TableCaption>A list of your recent invoices.</TableCaption>
         <TableHeader>
