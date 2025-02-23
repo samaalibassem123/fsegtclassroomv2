@@ -8,6 +8,8 @@ export default function JoinForm() {
     <form action="" className="flex flex-col gap-4">
       <Label>Classroom Code:</Label>
       <Input placeholder="Enter the classroom code" name="ccode" />
+      <Label>Class gorup:</Label>
+      <Input placeholder="exp:A04" name="cgroup" />
       <Button>Join</Button>
     </form>
   );
