@@ -16,6 +16,7 @@ import {
   LogOut,
   Menu,
   MessageCircle,
+  School,
   Users,
   Video,
 } from "lucide-react";
@@ -74,11 +75,13 @@ export default function CMenu() {
                   <Button>
                     {Dashboard ? (
                       <>
-                        Dashboard
+                        Courses
                         <BounceLoader color="#ffffff" size={20} />
                       </>
                     ) : (
-                      <>Dashboard</>
+                      <>
+                        Courses <School />
+                      </>
                     )}
                   </Button>
                 </SheetClose>

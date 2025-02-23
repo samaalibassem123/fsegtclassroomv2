@@ -3,7 +3,14 @@ import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import React from "react";
 import DMenu from "./CMenu";
-import { BookText, LogOut, MessageCircle, Users, Video } from "lucide-react";
+import {
+  BookText,
+  LogOut,
+  MessageCircle,
+  School,
+  Users,
+  Video,
+} from "lucide-react";
 import Link from "next/link";
 import CMenu from "./CMenu";
 
@@ -16,7 +23,9 @@ export default function CHeader() {
       </h1>
       <div className="lg:flex hidden gap-6">
         <Link href="/test">
-          <Button className="font-extrabold ">Dashboard</Button>
+          <Button className="font-extrabold ">
+            Courses <School />
+          </Button>
         </Link>
         <Link href="/test/chat">
           <Button className="font-extrabold ">
