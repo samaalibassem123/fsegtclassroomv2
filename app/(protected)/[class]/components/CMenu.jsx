@@ -22,8 +22,8 @@ import {
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
-import { ClipLoader } from "react-spinners";
-import * as SheetPrimitive from "@radix-ui/react-dialog";
+import { BounceLoader, ClipLoader } from "react-spinners";
+
 export default function CMenu() {
   const pathname = usePathname();
 
@@ -70,68 +70,99 @@ export default function CMenu() {
                 🙂
               </p>
               <Link href={"/test"} onClick={() => DashboardIsClicked(true)}>
-                <Button>
-                  {Dashboard ? (
-                    <ClipLoader color="#a6b9f4" loading={true} size={20} />
-                  ) : (
-                    <>Dashboard</>
-                  )}
-                </Button>
+                <SheetClose>
+                  <Button>
+                    {Dashboard ? (
+                      <>
+                        Dashboard
+                        <BounceLoader color="#ffffff" size={20} />
+                      </>
+                    ) : (
+                      <>Dashboard</>
+                    )}
+                  </Button>
+                </SheetClose>
               </Link>
               <Link href={"/test/chat"} onClick={() => chatIsClicked(true)}>
-                <Button>
-                  {chatClicked ? (
-                    <ClipLoader color="#a6b9f4" loading={true} size={20} />
-                  ) : (
-                    <>
-                      Chat <MessageCircle size={32} />
-                    </>
-                  )}
-                </Button>
+                <SheetClose>
+                  <Button>
+                    {chatClicked ? (
+                      <>
+                        Chat
+                        <BounceLoader color="#ffffff" size={20} />
+                      </>
+                    ) : (
+                      <>
+                        Chat <MessageCircle size={32} />
+                      </>
+                    )}
+                  </Button>
+                </SheetClose>
               </Link>
               <Link href={"/test/meet"} onClick={() => meetIsClicked(true)}>
-                <Button>
-                  {meetClicked ? (
-                    <ClipLoader color="#a6b9f4" loading={true} size={20} />
-                  ) : (
-                    <>
-                      Meet <Video size={32} />
-                    </>
-                  )}
-                </Button>
+                <SheetClose>
+                  <Button>
+                    {meetClicked ? (
+                      <>
+                        Meet
+                        <BounceLoader color="#ffffff" size={20} />
+                      </>
+                    ) : (
+                      <>
+                        Meet <Video size={32} />
+                      </>
+                    )}
+                  </Button>
+                </SheetClose>
               </Link>
               <Link href={"/test/docs"} onClick={() => docIsClicked(true)}>
-                <Button>
-                  {docClicked ? (
-                    <ClipLoader color="#a6b9f4" loading={true} size={20} />
-                  ) : (
-                    <>
-                      Docs <BookText size={32} />
-                    </>
-                  )}
-                </Button>
+                <SheetClose>
+                  <Button>
+                    {docClicked ? (
+                      <>
+                        Docs
+                        <BounceLoader color="#ffffff" size={20} />
+                      </>
+                    ) : (
+                      <>
+                        Docs <BookText size={32} />
+                      </>
+                    )}
+                  </Button>
+                </SheetClose>
               </Link>
               {/*IF THE ROLE IS A TEACHER*/}
               <Link href={"/test/groups"} onClick={() => GroupIsClicked(true)}>
-                <Button>
-                  {GroupClicked ? (
-                    <ClipLoader color="#a6b9f4" loading={true} size={20} />
-                  ) : (
-                    <>
-                      Groups <Users />
-                    </>
-                  )}
-                </Button>
+                <SheetClose>
+                  {" "}
+                  <Button>
+                    {GroupClicked ? (
+                      <>
+                        Groups
+                        <BounceLoader color="#ffffff" size={20} />
+                      </>
+                    ) : (
+                      <>
+                        Groups <Users />
+                      </>
+                    )}
+                  </Button>
+                </SheetClose>
               </Link>{" "}
               <Link href="/dashboard">
-                <Button className="font-extrabold bg-white text-black hover:bg-white/40 ">
-                  Go Back to Your Classes <LogOut />
-                </Button>
+                <SheetClose>
+                  <Button className="font-extrabold bg-white text-black hover:bg-white/40 ">
+                    Go Back to Your Classes <LogOut />
+                  </Button>
+                </SheetClose>
               </Link>
               <Link href={"/"} onClick={() => LogoutIsClicked(true)}>
                 <Button className="font-extrabold ">
                   {LogoutClicked ? (
-                    <ClipLoader color="#a6b9f4" loading={true} size={20} />
+                    <>
+                      Log-out
+                      <BounceLoader color="#ffffff" size={20} />
+                    </>
                   ) : (
                     <>
                       Log-out <LogOut size={32} />

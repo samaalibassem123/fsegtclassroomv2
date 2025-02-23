@@ -68,7 +68,7 @@ export default function DocTable() {
         <TableBody>
           {docs.map((Item, index) => (
             <>
-              <TableRow key={index}>
+              <TableRow Key={index}>
                 <TableCell className="font-medium">{index + 1}</TableCell>
                 <TableCell className="flex items-end gap-1">
                   <FileIcon /> {Item.docname}
