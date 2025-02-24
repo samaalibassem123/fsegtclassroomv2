@@ -24,7 +24,7 @@ export default function TdCard({ courseName, Description, Notes, Docs }) {
             </div>
           </AccordionTrigger>
 
-          <AccordionContent className="space-y-2">
+          <AccordionContent className=" flex flex-col gap-3">
             <span className=" underline text-lg">Notes:</span>
             <p>
               blah blah blah blah blah blah blah blah blah blah blah blah blah
@@ -44,12 +44,14 @@ export default function TdCard({ courseName, Description, Notes, Docs }) {
                 </div>
               ))}
             </div>
+            {/*GET STUDENT WORK FOR EACH TD BY THE TD NAME */}
+            <span className=" underline text-lg">Student work:</span>
           </AccordionContent>
           {/*FOR TEACHER ROLE */}
 
-          <Button className="mb-2 bg-red-500 hover:bg-red-500/50">
-            Delete
-          </Button>
+          <Button className="m-2 bg-red-500 hover:bg-red-500/50">Delete</Button>
+          {/*FOR STUDENT ROLE */}
+          <Button className="m-2">Submit Your Work</Button>
         </AccordionItem>
         <form action="" className="my-2 flex gap-1">
           <Input placeholder="Add a comment" />
