@@ -37,7 +37,7 @@ export default function AddCourse() {
           <form className="p-5 space-y-3">
             <div className="flex md:flex-row flex-col gap-2">
               <Label className="text-xl text-nowrap">The Course name :</Label>
-              <Input placeholder="exp: Tds" />
+              <Input placeholder="exp: Course 1" />
               <Label className="text-xl">
                 Description:
                 <small className="text-sm text-gray-600">(optional)</small>
