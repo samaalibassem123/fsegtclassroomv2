@@ -10,6 +10,7 @@ import { Input } from "@/components/ui/input";
 
 import { FileText, SendHorizonal } from "lucide-react";
 import SubmitWork from "./SubmitWork";
+import Link from "next/link";
 
 export default function TdCard({ courseName, Description, Notes, Docs }) {
   return (
@@ -48,7 +49,14 @@ export default function TdCard({ courseName, Description, Notes, Docs }) {
             <span className=" underline text-lg">Student work:</span>
           </AccordionContent>
           {/*FOR TEACHER ROLE */}
-          <Button className="m-2 bg-red-500 hover:bg-red-500/50">Delete</Button>
+          <div>
+            <Link href={"/"}>
+              <Button className="m-2 ">See Work Submissions</Button>
+            </Link>
+            <Button className="m-2 bg-red-500 hover:bg-red-500/50">
+              Delete
+            </Button>
+          </div>
           {/*FOR STUDENT ROLE */}
           <SubmitWork />{" "}
         </AccordionItem>
