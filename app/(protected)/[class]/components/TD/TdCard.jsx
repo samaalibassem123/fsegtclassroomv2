@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
 import { FileText, SendHorizonal } from "lucide-react";
+import SubmitWork from "./SubmitWork";
 
 export default function TdCard({ courseName, Description, Notes, Docs }) {
   return (
@@ -23,7 +24,6 @@ export default function TdCard({ courseName, Description, Notes, Docs }) {
               </small>
             </div>
           </AccordionTrigger>
-
           <AccordionContent className=" flex flex-col gap-3">
             <span className=" underline text-lg">Notes:</span>
             <p>
@@ -48,10 +48,9 @@ export default function TdCard({ courseName, Description, Notes, Docs }) {
             <span className=" underline text-lg">Student work:</span>
           </AccordionContent>
           {/*FOR TEACHER ROLE */}
-
           <Button className="m-2 bg-red-500 hover:bg-red-500/50">Delete</Button>
           {/*FOR STUDENT ROLE */}
-          <Button className="m-2">Submit Your Work</Button>
+          <SubmitWork />{" "}
         </AccordionItem>
         <form action="" className="my-2 flex gap-1">
           <Input placeholder="Add a comment" />
