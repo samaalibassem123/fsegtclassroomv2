@@ -11,6 +11,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { Checkbox } from "@/components/ui/checkbox";
+import { Button } from "@/components/ui/button";
 
 export function SelectStudents({ people }) {
   const [searchTerm, setSearchTerm] = useState("");
@@ -34,7 +35,7 @@ export function SelectStudents({ people }) {
     <div className="space-y-4">
       <Input
         type="text"
-        placeholder="Search Student..."
+        placeholder="Search Student... 🎯"
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
         className="max-w-sm"
@@ -48,12 +49,12 @@ export function SelectStudents({ people }) {
               className="flex gap-2 border bg-gray-200 p-2 rounded-md items-center"
             >
               <span className="text-nowrap">{person.name}</span>
-              <button
+              <Button
                 onClick={() => handleSelect(person)}
                 className="text-red-500 hover:text-red-700"
               >
                 Remove
-              </button>
+              </Button>
             </li>
           ))}
         </ul>
