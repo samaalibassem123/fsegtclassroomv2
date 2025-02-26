@@ -40,18 +40,18 @@ export function SelectStudents({ people }) {
         onChange={(e) => setSearchTerm(e.target.value)}
         className="max-w-sm"
       />
-      <div className="w-64">
+      <div className="w-full">
         <h2 className="text-lg font-semibold mb-2">Selected Students</h2>
-        <ul className="flex gap-2">
+        <ul className="flex gap-2 flex-wrap w-full">
           {selectedPeople.map((person) => (
             <li
               key={person.id}
               className="flex gap-2 border bg-gray-200 p-2 rounded-md items-center"
             >
-              <span className="text-nowrap">{person.name}</span>
+              <span className="text-nowrap font-normal">{person.name}</span>
               <Button
                 onClick={() => handleSelect(person)}
-                className="text-red-500 hover:text-red-700"
+                className="text-white bg-red-500 hover:bg-red-400 font-normal"
               >
                 Remove
               </Button>

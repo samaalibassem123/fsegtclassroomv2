@@ -41,7 +41,7 @@ export default function SubmitWork() {
         <ScrollArea className="h-[40svh]">
           <form className="p-5 space-y-3">
             <div className="flex flex-col gap-2">
-              <Label className="text-xl">
+              <Label className="text-xl underline">
                 Document:
                 <small className="text-sm text-gray-600">
                   Upload your Documents
@@ -50,14 +50,14 @@ export default function SubmitWork() {
               <FileUploader />
             </div>
             <div className="flex md:flex-row flex-col gap-2">
-              <Label className="text-xl">
+              <Label className="text-xl underline">
                 Description:
                 <small className="text-sm text-gray-600">(optional)</small>
               </Label>
               <Input placeholder="exp: this course or assignment  is for the Group A04 " />
             </div>
             <div className="flex  flex-col gap-2">
-              <Label className="text-xl">
+              <Label className="text-xl underline">
                 Add Persons that worked with you in this project:
                 <small className="text-sm text-gray-600">(optional)</small>
               </Label>
