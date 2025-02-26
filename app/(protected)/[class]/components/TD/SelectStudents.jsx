@@ -34,13 +34,13 @@ export function SelectStudents({ people }) {
     <div className="space-y-4">
       <Input
         type="text"
-        placeholder="Search people..."
+        placeholder="Search Student..."
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
         className="max-w-sm"
       />
       <div className="w-64">
-        <h2 className="text-lg font-semibold mb-2">Selected People</h2>
+        <h2 className="text-lg font-semibold mb-2">Selected Students</h2>
         <ul className="flex gap-2">
           {selectedPeople.map((person) => (
             <li
