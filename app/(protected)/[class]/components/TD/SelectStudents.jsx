@@ -46,7 +46,7 @@ export function SelectStudents({ people }) {
           {selectedPeople.map((person) => (
             <li
               key={person.id}
-              className="flex gap-2 border bg-gray-200 p-2 rounded-md items-center"
+              className="flex gap-2 border bg-gray-200 p-2 rounded-md items-center dark:text-black"
             >
               <span className="text-nowrap font-normal">{person.name}</span>
               <Button
