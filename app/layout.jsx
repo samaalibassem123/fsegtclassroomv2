@@ -1,6 +1,6 @@
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
-import { ModeToggle } from "@/components/animation/ModeToggle";
+
 
 export const metadata = {
   title: "Create Next App",
@@ -11,7 +11,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="min-h-screen w-full ">
-        <ThemeProvider attribute="class" enableSystem disableTransitionOnChange>
+        <ThemeProvider disableTransitionOnChange>
           {children}
         </ThemeProvider>
       </body>

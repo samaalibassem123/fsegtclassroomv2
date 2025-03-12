@@ -16,14 +16,14 @@ export default function Welcome() {
         variants={ShowAnimation}
         className="flex flex-col lg:items-start items-center lg:justify-start justify-center lg:text-left text-center gap-3"
       >
-        <motion.p
+        <motion.div
           variants={ShowAnimation}
           className="sm:text-6xl text-5xl font-semibold"
         >
           <span className="text-blue-400">Fsegt</span>
           <span className="text-white">Classroom</span>
-        </motion.p>
-        <motion.p
+        </motion.div>
+        <motion.div
           variants={ShowAnimation}
           className="text-gray-600 lg:text-sm text-[12px] p-1 lg:w-[900px] w-auto"
         >
@@ -42,7 +42,7 @@ export default function Welcome() {
           the way you teach and learn. Experience the future of education with{" "}
           <span className=" font-extrabold underline">Fsegt-classroom </span>
           where knowledge meets innovation.
-        </motion.p>{" "}
+        </motion.div>{" "}
         <motion.div variants={ShowAnimation}>
           {/* Sigin in With Google*/}
           <SigninButton />

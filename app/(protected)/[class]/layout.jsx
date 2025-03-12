@@ -8,9 +8,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <main className="min-h-screen w-full ">
+    <div className="min-h-screen w-full ">
       <CHeader />
       {children}
-    </main>
+    </div>
   );
 }
