@@ -50,7 +50,7 @@ export default function TdCard({ courseName, Description, Notes, Docs }) {
           </AccordionContent>
           {/*FOR TEACHER ROLE */}
           <div>
-            <Link href={"/"}>
+            <Link href={"/classid/work"}>
               <Button className="m-2 ">See Work Submissions</Button>
             </Link>
             <Button className="m-2 bg-red-500 hover:bg-red-500/50">
