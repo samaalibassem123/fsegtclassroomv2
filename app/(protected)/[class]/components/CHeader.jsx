@@ -2,7 +2,7 @@ import { ModeToggle } from "@/components/animation/ModeToggle";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import React from "react";
-import DMenu from "./CMenu";
+import CMenu from "./CMenu";
 import {
   BookText,
   LogOut,
@@ -12,7 +12,7 @@ import {
   Video,
 } from "lucide-react";
 import Link from "next/link";
-import CMenu from "./CMenu";
+
 
 export default function CHeader() {
   return (
