@@ -1,5 +1,5 @@
-import { CHeader } from "./components/CHeader";
 
+import CHeader from "./components/CHeader";
 
 export const metadata = {
   title: "Create Next App",
